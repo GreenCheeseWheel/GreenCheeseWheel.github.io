@@ -1,0 +1,2 @@
+dark-mode-background-color-body = #282c34;
+different-sections-left-padding = 0 0.5rem;

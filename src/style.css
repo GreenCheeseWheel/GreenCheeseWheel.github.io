@@ -1,0 +1,253 @@
+body {  
+    width: 100vw;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    overflow-x: hidden;
+    background-color: #282c34;
+    color: snow;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: snow;
+}
+
+.section {
+    width: auto;
+    margin: 0 5rem;
+    transition: 800ms;
+}
+
+
+/**********************/
+/* ANIMATIONS SECTION */
+/**********************/
+
+.hide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.hide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    
+}
+
+
+
+
+
+
+/*****************************/
+/* HEADER AND NAVBAR SECTION */
+/*****************************/
+
+.navbar {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #251F30;
+    box-shadow: 0 1px 5px 1px aquamarine;
+}
+
+.navbar--title {
+    margin-left: 10%;
+}
+
+.navbar--links {
+    list-style-type: none;
+    margin-right: 10%;
+    
+}
+
+.navbar--links li {
+    display: inline;
+    margin-left: 0.5em;
+}
+
+  /*******************/ /****************/ /*******************/          
+ /*******************/ /* MAIN SECTION */ /*******************/ 
+/*******************/ /****************/ /*******************/
+
+/********************/
+/* ABOUT ME SECTION */
+/********************/
+
+.about {
+    height: fit-content;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+/******************/
+/* SKILLS SECTION */
+/******************/
+
+.skills {
+    width: auto;
+    transition: 1.2s;
+}
+
+.skills--cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.card {
+    height: 70px;
+    margin: 1.5rem 1rem;
+    text-align: center;
+}
+
+.card--image {
+    height: 80%;
+}
+
+.card--text {
+    height: 20%;
+    background-color: inherit;
+}
+
+
+
+/*********************/
+/* PROYECTOS SECTION */
+/*********************/
+
+.proyectos--cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************/
+/* CONTACTO SECTION */
+/********************/
+
+.contacto {
+    width: auto;
+    
+}
+
+.contacto--form {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.contacto--input {
+    width: 40%;
+    height: 1.5rem;
+
+    margin: .75rem 0;
+    
+    text-indent: 1rem;
+
+    color: snow;
+    background-color: #282c34;
+    font-weight: 500;
+    font-size: medium;
+
+
+    border: none;
+    border-bottom: 3px solid aquamarine;
+    resize: none;
+}
+
+.contacto--submit {
+    
+    color: snow;
+    background-color: #45a6ff;
+    
+    font-weight: 600;
+    font-size: medium;
+
+    border: none;
+}
+
+.msg {
+    height: 5rem;
+    
+
+    font-family: inherit;
+    font-size: medium;
+}
+
+
+
+@media screen and (max-width: 769px) {
+
+
+
+    .hide-left {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    
+    .hide-right {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+
+
+
+    
+    .navbar{
+        width: 100%;
+        justify-content: space-around;
+
+    }
+
+
+    .navbar--title {
+        display: none;
+    }
+
+    .navbar--links {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: .5rem 0;
+        
+    }
+
+    .link:first-child {
+        display: none;
+    }
+
+    .link:nth-child(2) {
+        display: none;
+    }
+}

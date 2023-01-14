@@ -32,7 +32,7 @@ export default function Skills (props)
     */
 
     const cards = props.data.map(element => {
-        return (<Card key={element[1]} image={element[0]} text={element[1]}/>);
+        return (<Card key={element[1]} link="#" image={element[0]} text={element[1]}/>);
     })
 
     return (

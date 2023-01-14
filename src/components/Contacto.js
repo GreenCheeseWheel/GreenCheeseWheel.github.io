@@ -29,10 +29,11 @@ export default function Contacto()
     return (
         <section ref={sectionRef} className="contacto section" id="contacto-section">
             <h2 className="contacto--title">¡Cont&aacute;ctame!</h2>
-            <form className="contacto--form">
-                <input type="mail" placeholder="e-mail" className="contacto--input"></input>
-                <input type="text" placeholder="Asunto" className="contacto--input"></input>
-                <textarea placeholder="Mensaje" className="contacto--input msg"></textarea>
+            <form action="https://formsubmit.co/thegreencheesewheel@gmail.com" method="POST" className="contacto--form">
+                <input type="text" placeholder="Nombre" name="name" className="contacto--input"></input>
+                <input type="email" placeholder="e-mail" name="email" className="contacto--input"></input>
+                <input type="text" placeholder="Asunto" name="about" className="contacto--input"></input>
+                <textarea placeholder="Mensaje" name="message" className="contacto--input msg"></textarea>
                 <input type="submit" className="contacto--input contacto--submit"></input>
             </form>
         </section>

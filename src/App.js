@@ -25,7 +25,7 @@ export default function App()
     // Poblamos el array de proyData con las url y los textos
     data.proyectoData.forEach((obj) => 
         {
-            proyData.push([obj.imgData, obj.textData]);
+            proyData.push([obj.imgData, obj.textData, obj.urlData]);
         }
         );
 

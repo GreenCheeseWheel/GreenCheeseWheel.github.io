@@ -28,7 +28,7 @@ export default function Proyectos (props)
 
 
     const cards = props.data.map(element => {
-        return (<Card key={element[1]} image={element[0]} text={element[1]}/>);
+        return (<Card key={element[1]} image={element[0]} text={element[1]} link={element[2]}/>);
     })
 
 

@@ -34,7 +34,7 @@ export default function Proyectos (props)
 
     return (
         <section ref={sectionRef} className="proyectos section" id="proyectos-section">
-            <h2>Proyectos</h2>
+            <h2 className="proyectos--title">Proyectos</h2>
             <div className="proyectos--cards">
                 {cards}
             </div>

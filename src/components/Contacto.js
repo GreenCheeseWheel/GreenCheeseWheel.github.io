@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react"
 
-export default function Contacto()
+export default function Contacto(props)
 {
 
     const sectionRef = useRef(null);
@@ -17,7 +17,7 @@ export default function Contacto()
                entries.forEach((entry) => {
                    entry.target.classList.toggle("hide-right", !entry.isIntersecting);
                });
-        }, {threshold: 0.5});
+        }, {threshold: 0.25});
     
         observer.observe(sectionRef.current);
     
@@ -27,9 +27,9 @@ export default function Contacto()
 
 
     return (
-        <section ref={sectionRef} className="contacto section" id="contacto-section">
+        <section className="contacto section" id="contacto-section">
             <h2 className="contacto--title">¡Cont&aacute;ctame!</h2>
-            <form action="https://formsubmit.co/thegreencheesewheel@gmail.com" method="POST" className="contacto--form">
+            <form ref={sectionRef} action="https://formsubmit.co/thegreencheesewheel@gmail.com" method="POST" className="contacto--form">
                 <input type="text" placeholder="Nombre" name="name" className="contacto--input"></input>
                 <input type="email" placeholder="e-mail" name="email" className="contacto--input"></input>
                 <input type="text" placeholder="Asunto" name="about" className="contacto--input"></input>

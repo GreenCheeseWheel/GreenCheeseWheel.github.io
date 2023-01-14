@@ -32,12 +32,12 @@ a {
 
 .hide-left {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-50px) skewX(-15deg);
 }
 
 .hide-right {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(50px) skewX(15deg);
     
 }
 
@@ -63,6 +63,27 @@ a {
 
 .navbar--title {
     margin-left: 10%;
+}
+
+.navbar--darkmode---container {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar--darkmode {
+    width: fit-content;
+
+    padding: 3px;
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+    background-color: grey;
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
 .navbar--links {
@@ -107,6 +128,8 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 
+    border-top: 1px solid #45a6ff;
+    
     align-items: center;
     justify-content: space-around;
 }
@@ -135,21 +158,36 @@ a {
 /* PROYECTOS SECTION */
 /*********************/
 
-.proyectos--cards {
-    display: flex;
-    justify-content: space-around;
+.proyectos {
+    margin: auto;
 }
 
+.proyectos--title {
+    margin: 3rem 5rem;
+}
 
+.proyectos--cards {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 15px;
 
+    border-top: 1px solid #45a6ff;
 
+    margin-bottom: 5rem;
+}
 
+.proyectos--cards .card {
+    height: 100px;
+    transition: 1s;
+}
 
-
-
-
-
-
+.proyectos--cards .card:hover {
+    opacity: 0.65;
+    scale: 1.1;
+}
 
 
 
@@ -158,13 +196,22 @@ a {
 /********************/
 
 .contacto {
-    width: auto;
+    width: 100%;
+    margin-left: 0;
+    background-color: #251F30;
     
+}
+
+.contacto--title {
+    margin: 0 5rem;
 }
 
 .contacto--form {
     width: 100%;
-    
+    margin: 0 5rem;
+
+    transition: 800ms;
+
     display: flex;
     flex-direction: column;
 
@@ -180,7 +227,7 @@ a {
     text-indent: 1rem;
 
     color: snow;
-    background-color: #282c34;
+    background-color: inherit;
     font-weight: 500;
     font-size: medium;
 
@@ -188,6 +235,11 @@ a {
     border: none;
     border-bottom: 3px solid aquamarine;
     resize: none;
+}
+
+.contacto--input::placeholder {
+    color: snow;
+    font-weight: bold;
 }
 
 .contacto--submit {
@@ -199,6 +251,7 @@ a {
     font-size: medium;
 
     border: none;
+    cursor: pointer;
 }
 
 .msg {
@@ -254,4 +307,46 @@ a {
     .link:nth-child(2) {
         display: none;
     }
+
+
+    /*********************/
+    /* PROYECTOS SECTION */
+    /*********************/
+
+    .proyectos--cards {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 2rem;
+    
+        margin-bottom: 5rem;
+    }
+
+    .proyectos--cards .card {
+        height: 120px;
+    }
+
+
+
+    /********************/
+    /* CONTACTO SECTION */
+    /********************/
+
+    .contacto {
+        width: 100%;
+    }
+
+    .contacto--form {
+        width: 80%;
+        margin: auto;
+    }
+
+    .contacto--input {
+        width: 100%;
+    }
+    
+
+
 }

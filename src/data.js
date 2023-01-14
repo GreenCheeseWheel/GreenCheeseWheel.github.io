@@ -43,7 +43,7 @@ export default {
         },
         {
             imgData: "./img/proy/ECommerce.png",
-            textData: "E-Commerce website",
+            textData: "E-Commerce",
             urlData: "https://github.com/GreenCheeseWheel/ECommerceWeb"
         },
         {

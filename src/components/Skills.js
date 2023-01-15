@@ -18,7 +18,7 @@ export default function Skills (props)
             entries.forEach((entry) => {
                 entry.target.classList.toggle("hide-right", !entry.isIntersecting);
             });
-        }, {threshold: 0.5});
+        }, {threshold: 0.33});
 
         observer.observe(sectionRef.current);
 

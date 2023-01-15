@@ -56,6 +56,11 @@ export default {
             textData: "Spring Security Application (Back-end)",
             urlData: "https://github.com/GreenCheeseWheel/secureAppDemo"
         },
+        {
+            imgData: "./img/proy/portfolio.png",
+            textData: "Portfolio (Repo)",
+            urlData: "https://github.com/GreenCheeseWheel/GreenCheeseWheel.github.io"
+        }
 
     ]
 }

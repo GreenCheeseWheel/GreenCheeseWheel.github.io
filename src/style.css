@@ -1,11 +1,13 @@
 body {  
-    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
 
     margin: 0;
     padding: 0;
     border: 0;
 
     overflow-x: hidden;
+    
     background-color: #282c34;
     color: snow;
     font-family: "Open Sans", sans-serif;
@@ -19,8 +21,10 @@ a {
 }
 
 .section {
-    width: fit-content;
-    margin: 0 5rem;
+    
+    min-height: 100vh;
+    max-width: 80%;
+    margin: 0 auto;
     transition: 800ms;
 }
 
@@ -32,111 +36,19 @@ a {
 
 .hide-left {
     opacity: 0;
-    transform: translateX(-50px) skewX(-15deg);
+    transform: translateY(5vh) skewY(-5deg);
 }
 
 .hide-right {
     opacity: 0;
-    transform: translateX(50px) skewX(15deg);
+    transform:  translateY(5vh) skewY(5deg);
     
 }
 
-
-
-
-
-
-/*****************************/
-/* HEADER AND NAVBAR SECTION */
-/*****************************/
-
-.navbar {
-    display: flex;
-    width: 100%;
-
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: #251F30;
-    box-shadow: 0 1px 5px 1px aquamarine;
-}
-
-.navbar--title {
-    margin-left: 10%;
-}
-
-.navbar--darkmode---container {
-    width: fit-content;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.navbar--darkmode {
-    width: fit-content;
-
-    padding: 3px;
-    margin-left: 5rem;
-    margin-top: 0.5rem;
-    background-color: grey;
-    border-radius: 5px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-.navbar--links {
-    list-style-type: none;
-    margin-right: 10%;
-    
-}
-
-.navbar--links li {
-    display: inline;
-    margin-left: 0.5em;
-}
-
-  /*******************/ /****************/ /*******************/          
- /*******************/ /* MAIN SECTION */ /*******************/ 
-/*******************/ /****************/ /*******************/
-
-/********************/
-/* ABOUT ME SECTION */
-/********************/
-
-.about {
-    height: fit-content;
-    margin-bottom: 1rem;
-}
-
-
-
-
-
-/******************/
-/* SKILLS SECTION */
-/******************/
-
-.skills {
-    width: auto;
-    transition: 1.2s;
-}
-
-.skills--cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    border-top: 1px solid #45a6ff;
-    
-    align-items: center;
-    justify-content: space-around;
-}
 
 
 .card {
-    height: 80px;
+    height: 5em;
     margin: 1.5rem 1rem;
     text-align: center;
 
@@ -154,23 +66,192 @@ a {
 
 
 
+
+
+
+/*****************************/
+/* HEADER AND NAVBAR SECTION */
+/*****************************/
+header {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #251F30;
+    font-size: 1.3rem;
+    box-shadow: 0 1px 5px 1px aquamarine;
+}
+
+.navbar--title {
+    margin-left: 5rem;
+}
+
+.navbar--darkmode---container {
+    width: fit-content;
+    margin: 1rem 0;
+    display: flex;
+    position: absolute;
+    
+}
+
+.navbar--darkmode {
+    width: fit-content;
+    position: relative;
+
+    padding: 3px;
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    background-color: grey;
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.navbar--links {
+    list-style-type: none;
+    margin-right: 5rem;
+    
+}
+
+.navbar--links li {
+    display: inline;
+    margin-left: 0.5em;
+}
+
+  /*******************/ /****************/ /*******************/          
+ /*******************/ /* MAIN SECTION */ /*******************/ 
+/*******************/ /****************/ /*******************/
+
+
+/****************/
+/* HOME SECTION */
+/****************/
+
+.home {
+    height: 100vh;
+    max-width: 100%;
+
+
+    margin-bottom: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background: linear-gradient(to right, #282c34 75%, #e4e5f1 75%, #e4e5f1 );
+}
+
+.home--light_mode {
+    background: linear-gradient(to right, #e4e5f1 75%, #282c34 75%, #282c34 );
+}
+
+.home--title {
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.home--subtitle {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.home--text {
+    margin-left: 10%;
+    width: fit-content;
+}
+
+
+.home--links {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px;
+
+}
+
+
+/********************/
+/* ABOUT ME SECTION */
+/********************/
+
+.about {
+    width: 75%;
+    margin-bottom: 1rem;
+}
+
+.about--title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about--subtitle {
+    text-align: center;
+}
+
+.about--text {
+    text-align: center;
+
+    font-size: larger;
+    font-weight: 500;
+}
+
+
+
+/******************/
+/* SKILLS SECTION */
+/******************/
+
+.skills {
+    width: 70%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+
+    transition: 1.2s;
+
+}
+
+.skills--cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border-top: 1px solid #45a6ff;
+    
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
 /*********************/
 /* PROYECTOS SECTION */
 /*********************/
 
 .proyectos {
-    margin: auto;
+    width: 75%;
 }
 
 .proyectos--title {
-    margin: 3rem 5rem;
+    margin-top: 2rem;
+    margin-bottom: .5em;
 }
 
 .proyectos--cards {
-    width: 50%;
+    width: auto;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 4rem 1rem;
 
@@ -181,11 +262,12 @@ a {
 
 .proyectos--cards .card {
     height: 100px;
+    filter: sepia(80%);
     transition: 1s;
 }
 
 .proyectos--cards .card:hover {
-    opacity: 0.65;
+    filter: sepia(0%);
     scale: 1.1;
 }
 
@@ -196,18 +278,22 @@ a {
 /********************/
 
 .contacto {
+    max-width: 100%;
     width: 100%;
+    min-height: 100vh;
+
     margin-left: 0;
+    padding-top: 1rem;
     background-color: #251F30;
     
 }
 
 .contacto--title {
-    margin: 0 5rem;
+    margin: 1rem 5rem;
 }
 
 .contacto--form {
-    width: 75%;
+    width: 70%;
     margin: 0 5rem;
 
     transition: 800ms;
@@ -284,6 +370,7 @@ a {
     .navbar{
         width: 100%;
         justify-content: space-around;
+        font-size: 0.9rem;
 
     }
 
@@ -296,9 +383,10 @@ a {
         display: flex;
         flex-wrap: wrap;
         list-style-type: none;
-        margin: .5rem 0;
+        margin: .5rem auto;
         
     }
+
 
     .link:first-child {
         display: none;
@@ -308,6 +396,9 @@ a {
         display: none;
     }
 
+    .link {
+        margin: auto 1.5rem;
+    }
 
     /*********************/
     /* PROYECTOS SECTION */

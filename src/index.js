@@ -9,3 +9,10 @@ const root = createRoot(createRootElement);
 
 root.render(<App />);
 
+
+
+/** 
+ * HACE FALTA TERMINAR LA PARTE DE HOME ANTES DE LA SECCION ABOUT
+ * 
+ * 
+*/

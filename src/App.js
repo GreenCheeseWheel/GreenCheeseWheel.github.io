@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 
 import Header from "./components/Header"
+import Home from "./components/Home"
 import About from "./components/About"
 import Skills from "./components/Skills"
 import Proyectos from "./components/Proyectos"
@@ -48,6 +49,7 @@ export default function App()
             let linksElements = document.getElementsByTagName("a");
             let inputElements = document.getElementsByClassName("contacto--input");
             let submitElement = document.getElementsByClassName("contacto--submit").item(0);
+            let homeElement = document.getElementsByClassName("home").item(0);
 
             //
             // Chequeamos si el dark-mode está activado o no y creamos el string para aplicar estilos
@@ -75,6 +77,8 @@ export default function App()
             }
             
             submitElement.style = `color: snow; background-color: ${darkmodeOn ? "#45a6ff" : "#5cb85c"};`
+            homeElement.style = `color: ${darkmodeOn ? "snow" : "black"}`;
+            homeElement.classList.toggle("home--light_mode", !darkmodeOn);
 
             //
             // Cambiamos el estado
@@ -97,6 +101,7 @@ export default function App()
             </header>
 
             <main>
+                <Home />
                 <About />
                 <Skills data={skillsData.map(element => element)} darkmode={darkmodeOn} />
                 <Proyectos data={proyData.map(element => element)} darkmode={darkmodeOn}/>

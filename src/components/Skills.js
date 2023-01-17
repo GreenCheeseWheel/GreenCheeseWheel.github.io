@@ -35,8 +35,9 @@ export default function Skills (props)
         return (<Card key={element[1]} link="#" image={element[0]} text={element[1]}/>);
     })
 
+
     return (
-        <section ref={sectionRef} className="skills section" id="skills-section">
+        <section ref={sectionRef} className="skills section" id="skills-section" style={{backgroundColor: "inherit", color: `${props.darkmode ? "snow" : "black"}`}}>
             <h2>Skills</h2>
             <div className="skills--cards">
                 {cards}

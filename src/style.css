@@ -14,6 +14,15 @@ body {
 
 }
 
+/* Parallax Wrapper */
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    perspective: 1000px;
+    overflow-x: hidden;
+}
+
+
 
 a {
     text-decoration: none;
@@ -36,12 +45,12 @@ a {
 
 .hide-left {
     opacity: 0;
-    transform: translateY(5vh) skewY(-5deg);
 }
 
 .hide-right {
     opacity: 0;
-    transform:  translateY(5vh) skewY(5deg);
+    transform:  translateX(-250px);
+    
     
 }
 
@@ -72,9 +81,13 @@ a {
 /*****************************/
 /* HEADER AND NAVBAR SECTION */
 /*****************************/
+
+/* Parallax Header */
 header {
+    position: relative;
     width: 100%;
 }
+
 
 .navbar {
     width: 100%;
@@ -90,10 +103,28 @@ header {
 
 .navbar--title {
     margin-left: 5rem;
+    font-size: large;
+    font-weight: bolder;
 }
 
+
+.navbar--links {
+    list-style-type: none;
+    margin-right: 25%;
+    font-size: large;
+    font-weight: lighter;
+    
+}
+
+.navbar--links li {
+    display: inline;
+    margin-left: 0.5em;
+}
+
+
 .navbar--darkmode---container {
-    width: fit-content;
+    width: 25%;
+    height: fit-content;
     margin: 1rem 0;
     display: flex;
     position: absolute;
@@ -103,6 +134,9 @@ header {
 .navbar--darkmode {
     width: fit-content;
     position: relative;
+    display: flex;
+
+    align-items: center;
 
     padding: 3px;
     margin-left: 3rem;
@@ -116,16 +150,13 @@ header {
     cursor: pointer;
 }
 
-.navbar--links {
-    list-style-type: none;
-    margin-right: 5rem;
-    
+.navbar--darkmode img {
+    width: 25px;
+    margin-left: 1rem;
 }
 
-.navbar--links li {
-    display: inline;
-    margin-left: 0.5em;
-}
+
+
 
   /*******************/ /****************/ /*******************/          
  /*******************/ /* MAIN SECTION */ /*******************/ 
@@ -136,25 +167,31 @@ header {
 /* HOME SECTION */
 /****************/
 
+
 .home {
     height: 100vh;
     max-width: 100%;
 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+    text-align: center;
+    align-items: center;
 
     margin-bottom: 2rem;
     
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
     background: linear-gradient(to right, #282c34 75%, #e4e5f1 75%, #e4e5f1 );
+
+    
 }
 
 .home--light_mode {
     background: linear-gradient(to right, #e4e5f1 75%, #282c34 75%, #282c34 );
+    color: black;
 }
 
 .home--title {
+    text-align: left;
     font-size: 2.5em;
     font-weight: bolder;
 }
@@ -173,9 +210,24 @@ header {
 .home--links {
     list-style-type: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 15px;
 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 20px;
+
+}
+
+.home--links img {
+    height: 1.4rem;
+}
+
+.home--link---item {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.home--image {
+    width: 200px;
 }
 
 
@@ -187,6 +239,7 @@ header {
     width: 75%;
     margin-bottom: 1rem;
 }
+
 
 .about--title {
     text-align: center;
@@ -221,12 +274,14 @@ header {
 }
 
 .skills--cards {
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
     border-top: 1px solid #45a6ff;
     
+    font-weight: bold;
     align-items: center;
     justify-content: space-around;
 }
@@ -251,24 +306,25 @@ header {
     width: auto;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     gap: 4rem 1rem;
 
     border-top: 1px solid #45a6ff;
 
-    margin-bottom: 5rem;
+    font-weight: bolder;
+    margin-bottom: auto;
 }
 
 .proyectos--cards .card {
-    height: 100px;
-    filter: sepia(80%);
-    transition: 1s;
+    min-height: 100px;
+    height: 250px;
+    transition: 800ms;
+    
 }
 
-.proyectos--cards .card:hover {
-    filter: sepia(0%);
-    scale: 1.1;
+.proyectos--cards .card:active {
+    transform: rotateY(180deg);
 }
 
 
@@ -285,8 +341,19 @@ header {
     margin-left: 0;
     padding-top: 1rem;
     background-color: #251F30;
+
+
     
 }
+
+.contacto--container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+
+}
+
+
 
 .contacto--title {
     margin: 1rem 5rem;
@@ -364,8 +431,14 @@ header {
         transform: translateX(0px);
     }
 
+    /******************/
+    /* HEADER SECTION */
+    /******************/
 
-
+    header {
+        z-index: -1;
+        transform: translateZ(-150px) scale(1.15);
+    }
     
     .navbar{
         width: 100%;
@@ -400,6 +473,35 @@ header {
         margin: auto 1.5rem;
     }
 
+
+
+    /****************/
+    /* HOME SECTION */
+    /****************/
+
+    .home--image {
+        display: none;
+    }
+
+
+    /*****************/
+    /* ABOUT SECTION */
+    /*****************/
+
+    .about {
+        width: 100%;
+        line-height: 1.5rem;
+        padding: 15px;
+        border: 2px solid #f2aaff;
+        background-color: #282c34;
+        color: snow;
+    }
+
+    .about--title, .about--subtitle, .about--text {
+        color: snow;
+    }
+
+
     /*********************/
     /* PROYECTOS SECTION */
     /*********************/
@@ -416,7 +518,8 @@ header {
     }
 
     .proyectos--cards .card {
-        height: 120px;
+        min-height: 1px;
+        height: 33vw;
     }
 
 
@@ -425,8 +528,13 @@ header {
     /* CONTACTO SECTION */
     /********************/
 
+
     .contacto {
         width: 100%;
+    }
+
+    .contacto--container {
+        display: flex;
     }
 
     .contacto--form {
@@ -438,6 +546,8 @@ header {
         width: 100%;
     }
     
-
+    #blobSvg {
+        display: none;
+    }
 
 }

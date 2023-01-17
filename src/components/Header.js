@@ -2,7 +2,8 @@ import React, { useState } from "react"
 
 export default function Header(props)
 {
-    console.log(props.darkmode);
+    
+    
     return(
         <nav className="navbar">
             <div className="navbar--title">✧ Costa Lucas</div>

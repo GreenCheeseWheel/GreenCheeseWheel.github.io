@@ -29,7 +29,17 @@ export default {
         {   
             imgData: "./img/springboot.svg",
             textData: "Spring"
-        } 
+        },
+        
+        {   
+            imgData: "./img/figma.svg",
+            textData: "Figma"
+        },
+
+        {
+            imgData: "./img/mysql.svg",
+            textData: "MySQL"
+        }
          
          
 
@@ -62,5 +72,12 @@ export default {
             urlData: "https://github.com/GreenCheeseWheel/GreenCheeseWheel.github.io"
         }
 
+    ],
+
+    darkmodeData: [
+        {
+            moonSvg: "./img/moon.svg",
+            sunSvg: "./img/sun.svg"
+        }
     ]
 }

@@ -18,7 +18,7 @@ export default function Proyectos (props)
             entries.forEach((entry) => {
                 entry.target.classList.toggle("hide-left", !entry.isIntersecting);
             });
-        }, {threshold: 0.25});
+        }, {threshold: 0.2});
 
         observer.observe(sectionRef.current);
 
@@ -38,7 +38,6 @@ export default function Proyectos (props)
             <div className="proyectos--cards">
                 {cards}
             </div>
-
         </section>
     );
 

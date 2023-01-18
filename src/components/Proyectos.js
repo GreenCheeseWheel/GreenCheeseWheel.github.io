@@ -5,8 +5,11 @@ export default function Proyectos (props)
 {   
     const sectionRef = useRef(null);
     const cardsClick = useRef(null);
+    
+    const fontColor = props.darkmode ? "#e4e5f1" : "#282c34";
+    
 
-     /*
+    /*
         El siguiente bloque de código se encarga de las animaciones
         de aparición y desaparición de los elementos en pantalla
         según el scroll del usuario
@@ -33,9 +36,9 @@ export default function Proyectos (props)
 
 
     return (
-        <section ref={sectionRef} className="proyectos section" id="proyectos-section">
+        <section ref={sectionRef} className="proyectos section" id="proyectos-section" style={{color: fontColor}}>
             <h2 className="proyectos--title">Proyectos</h2>
-            <div className="proyectos--cards">
+            <div className="proyectos--cards" >
                 {cards}
             </div>
         </section>

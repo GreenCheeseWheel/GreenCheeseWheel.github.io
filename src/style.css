@@ -96,9 +96,9 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    background-color: #251F30;
+    background-color: #e4e5f1;
+    color: #251F30;
     font-size: 1.3rem;
-    box-shadow: 0 1px 5px 1px aquamarine;
 }
 
 .navbar--title {
@@ -114,11 +114,13 @@ header {
     font-size: large;
     font-weight: lighter;
     
+    
 }
 
-.navbar--links li {
+.navbar--links li, .navbar--links li *{
     display: inline;
     margin-left: 0.5em;
+    color: #251F30;
 }
 
 
@@ -142,7 +144,8 @@ header {
     margin-left: 3rem;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    background-color: grey;
+    background-color: #45a6ff;
+    color: #251F30;
     border-radius: 5px;
 
     font-weight: bold;
@@ -237,7 +240,13 @@ header {
 
 .about {
     width: 75%;
+    display: flex;
+    flex-direction: column;
+    
     margin-bottom: 1rem;
+    
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -386,12 +395,12 @@ header {
 
 
     border: none;
-    border-bottom: 3px solid aquamarine;
+    border-bottom: 3px solid #45a6ff;
     resize: none;
 }
 
 .contacto--input::placeholder {
-    color: snow;
+    color: #577FA3;
     font-weight: bold;
 }
 
@@ -492,7 +501,7 @@ header {
         width: 100%;
         line-height: 1.5rem;
         padding: 15px;
-        border: 2px solid #f2aaff;
+        border: 2px solid #45a6ff;
         background-color: #282c34;
         color: snow;
     }

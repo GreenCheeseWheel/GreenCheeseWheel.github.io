@@ -4,15 +4,13 @@ export default function About(props)
 {
     var styleVal;
 
-    if(window.matchMedia("(min-width: 770px)").matches) {
-        styleVal = {color: `${props.darkmode ? "snow" : "black"}`};
-    } else {
-        styleVal = {color: "snow"};
-    }
+    
+    styleVal = {backgroundColor: `${props.darkmode ? "#282c34" : "#e4e5f1"}`, color: `${props.darkmode ? "snow" : "black"}`};
+    
 
 
     return (
-        <section className="about section" id="about-section">
+        <section className="about section" id="about-section" style={styleVal}>
             <h2 className="about--title" style={styleVal}>About</h2>
             <h3 className="about--subtitle" style={styleVal}>↓ Conoce acerca de m&iacute; ↓</h3>
             <p className="about--text" style={styleVal}> Además de estar cursando el segundo año de mi carrera, estoy sumamente interesado en el 

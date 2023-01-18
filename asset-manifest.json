@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.b624ce80.chunk.css",
-  "main.js": "/static/js/main.7b883eb7.chunk.js",
-  "main.js.map": "/static/js/main.7b883eb7.chunk.js.map",
+  "main.css": "/static/css/main.b0aa1ba8.chunk.css",
+  "main.js": "/static/js/main.0cb5615d.chunk.js",
+  "main.js.map": "/static/js/main.0cb5615d.chunk.js.map",
   "static/js/1.c9d3f7e8.chunk.js": "/static/js/1.c9d3f7e8.chunk.js",
   "static/js/1.c9d3f7e8.chunk.js.map": "/static/js/1.c9d3f7e8.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -9,8 +9,8 @@
   "static/media/CV_CostaLucas.pdf": "/static/media/CV_CostaLucas.3e08c827.pdf",
   "static/media/github.svg": "/static/media/github.3ba44647.svg",
   "static/media/linkedin.svg": "/static/media/linkedin.17d4d429.svg",
-  "static/css/main.b624ce80.chunk.css.map": "/static/css/main.b624ce80.chunk.css.map",
+  "static/css/main.b0aa1ba8.chunk.css.map": "/static/css/main.b0aa1ba8.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.34ce635de73b3a14e90a9ccd46de1556.js": "/precache-manifest.34ce635de73b3a14e90a9ccd46de1556.js",
+  "precache-manifest.3bb55b14433ad475b202b78fa9f29da6.js": "/precache-manifest.3bb55b14433ad475b202b78fa9f29da6.js",
   "service-worker.js": "/service-worker.js"
 }

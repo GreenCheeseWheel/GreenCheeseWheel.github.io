@@ -48,7 +48,7 @@ export default function App()
             setDarkModeIcon(prevState ? dataDarkMode.moonSvg : dataDarkMode.sunSvg);
             bodyElement.style = `background-color: ${prevState ? "#e4e5f1" : "#282c34"};`; 
 
-            return (prevState ? false : true);
+            return (!prevState);
         });
 
         setDarkMode(prevState => {

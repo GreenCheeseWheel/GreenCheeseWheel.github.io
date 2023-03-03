@@ -20,7 +20,12 @@ export default {
             imgData: "./img/react.svg",
             textData: "React"
         },
-        
+
+        {
+            imgData: "./img/node-js.svg",
+            textData: "Node JS"
+        },
+         
         {
             imgData: "./img/java.svg",
             textData: "Java"
@@ -39,17 +44,14 @@ export default {
         {
             imgData: "./img/mysql.svg",
             textData: "MySQL"
-        }
-         
-         
-
+        }     
 
     ],
     proyectoData: [
         {
-            imgData: "./img/proy/CustomerRel.png",
-            textData: "CRM Application (Back-end)",
-            urlData: "https://github.com/GreenCheeseWheel/CustomerRelManag"
+            imgData: "./img/proy/ImageGen.png",
+            textData: "AI Image Generation (React)",
+            urlData: "https://github.com/GreenCheeseWheel/image-generation"
         },
         {
             imgData: "./img/proy/ECommerce.png",
